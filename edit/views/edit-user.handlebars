@@ -1,0 +1,23 @@
+<form method="POST" style="display:flex; flex-direction:column; gap:20px; background-color:white; width:auto; padding: 20px 40px">
+    {{#if message}}
+    <div style="display:flex; background-color: {{status}}; padding: 15px 10px">{{message}}</div>
+    {{/if}}
+    <div style="display:flex; flex-direction:column; gap: 20px;">
+        <label>Vardas
+            <input type="text" name="vardas" value="{{data.vardas}}">
+        </label>
+        <label>Pavardė
+            <input type="text" name="pavarde" value="{{data.pavarde}}">
+        </label>
+        <label>Adresas
+            <input type="text" name="adresas" value="{{data.adresas}}">
+        </label>
+        <label>Telefonas
+            <input type="phone" name="telefonas" value="{{data.telefonas}}">
+        </label>
+        <label>El paštas
+            <input type="email" name="elPastas" value="{{data.elPastas}}">
+        </label>
+        <button type="submit" style="width: 140px; background-color:pink; border-radius:5px; border:none; padding: 10px">Išsaugoti</button>
+    </div>
+</form>

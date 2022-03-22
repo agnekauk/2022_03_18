@@ -1,0 +1,30 @@
+{{#if duomenys}}
+
+<table style="border: solid black 1px; border-collapse: collapse">
+    <thead>
+        <th  style="padding: 10px; text-align: center">#</th>
+        <th  style="padding: 10px; text-align: center">Vardas</th>
+        <th  style="padding: 10px; text-align: center">Pavardė</th>
+        <th  style="padding: 10px; text-align: center">Adresas</th>
+        <th  style="padding: 10px; text-align: center">Telefonas</th>
+        <th  style="padding: 10px; text-align: center">El.paštas</th>
+        <th  style="padding: 10px; text-align: center"></th>
+    </thead>
+    <tbody>
+        {{#each duomenys}}
+        <tr style="border: solid black 1px" >
+            <td  style="padding: 10px;  text-align: center" >{{this.id}}</td>
+            <td  style="padding: 10px;  text-align: center" >{{this.vardas}}</td>
+            <td  style="padding: 10px;  text-align: center" >{{this.pavarde}}</td>
+            <td  style="padding: 10px;  text-align: center" >{{this.adresas}}</td>
+            <td  style="padding: 10px;  text-align: center" >{{this.telefonas}}</td>
+            <td  style="padding: 10px;  text-align: center" >{{this.elPastas}}</td>
+            <td>
+                <a href="/edit-user/{{id}}" class="edit-button" style="width: 140px; background-color:cornflowerblue; color:#fff; border-radius:5px; border:none; padding: 10px; text-decoration:none; font-size:14px">KOREGUOTI</a>
+                <button data-id ="{{id}}"class="delete-button" style="width: 140px; background-color: black; color:#fff; border-radius:5px; border:none; padding: 10px">IŠTRINTI</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/if}}
